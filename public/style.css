@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #111111;      
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 36px 0;      
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;   
+}
+
+header nav a {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 19px;
+    text-decoration: initial;
+    color: #111111;
+    margin: 0 15px;
+}
+
+header nav a:hover{
+    font-weight:bold;
+}
+
+.open-box {    
+    padding: 117px 60px;
+    background-color: #FBDFDB;
+    border-radius: 30px;    
+    margin-bottom: 50px;     
+    position: relative;   
+}
+
+.open-box-content {        
+    max-width: 316px;       
+}
+
+.open-box-content h1 {
+    font-size: 32px;
+    font-weight: bold;    
+    line-height: 38px;
+    margin-bottom: 10px;
+}
+
+.open-box-content p {
+    font-size: 18px;
+    line-height: 28px;
+    color: #000000;
+    opacity: 0.7;
+}
+
+.open-box img {     
+    position: absolute;    
+    right: 100px;
+    bottom: 0;
+    width: 23%;
+}
+
+.grid-title h3 {    
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 28px;
+    margin-bottom: 20px;
+}
+
+.recipes {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:20px;    
+    margin-bottom: 50px;    
+}
+
+.card img {
+    width: 300px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.card h4 {
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 16px;
+    color: #777777;
+    margin-bottom: 30px;
+}
+
+footer {   
+    padding: 23px 0;    
+    background-color: #EEEEEE;        
+    text-align: center;
+    font-size: 14px;
+    line-height: 16px;
+    color: #999999;    
+    position: absolute;
+    left: 0;
+    width: 100%;
+    
+}
+
+/* === ABOUT === */
+
+main {
+    margin-bottom: 50px;
+}
+
+.about-title h3 {    
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 28px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.history p {    
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+    margin-bottom: 30px;
+}
+
+.history h4 {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+.container.about a#bold1 {
+    font-weight:bold;
+}
+
+/* === RECIPES === */
+
+.container.recipes a#bold2 {
+    font-weight:bold;
+}
+
+.grid-recipes {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* === MODAL === */
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.781);
+    width: 100%;
+    height: 100%;
+    position: fixed;    
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background: #FFFFFF;
+    border-radius: 16px;
+    width: 50%;
+    height: 64%;
+    margin: 20vh auto;       
+}
+
+.modal-img img {
+    width: 90%;
+    height: 200px;
+    object-fit: none;
+    border-radius: 15px; 
+    margin: 30px 30px 20px 30px;
+}
+
+.modal-content h4 {
+    font-size: 24px;
+    color: #111111;
+    line-height: 28px;
+    text-align: center;
+    margin-bottom: 5px;    
+}
+
+.modal-content p {
+    font-size: 18px;
+    color: #777777;
+    text-align: center;
+    line-height: 21px;
+    margin-bottom: 60px;
+}
+
+.close-modal {    
+    font-size: 16px;
+    color: #999999;
+    line-height: 19px;
+    text-align: center;    
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+/* === MODAL ACTIVE === */
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
