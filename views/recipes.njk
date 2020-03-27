@@ -4,81 +4,20 @@
         <title>Receitas Foodfy</title>  
 {% endblock %}
 
-{% block content %}
-
+{% block content %}    
         <div class="container">
             <main class="grid-recipes">
-                <section class="recipes">            
-                    <div class="card" id="burger">
-                        <img src="burger.png" alt="Burger">
-                        <h4>Triplo bacon burger</h4>
-                        <p>por Jorge Renato</p>
+                <section class="recipes">  
+
+                {% for item in items %} 
+
+                    <div class="card" id="{{ loop.index }}">
+                        <img src="{{ item.image }}" alt="Image of {{ item.title }}">
+                        <h4>{{ item.title }}</h4>
+                        <p>por {{ item.author }}</p>
                     </div>
 
-                    <div class="card" id="pizza">
-                        <img src="pizza.png" alt="Pizza">
-                        <h4>Pizza 4 estações</h4>
-                        <p>por Fabiana Melo</p>
-                    </div>
-
-                    <div class="card" id="espaguete">
-                        <img src="espaguete.png" alt="Macarrão">
-                        <h4>Espaguete ao alho</h4>
-                        <p>por Júlia Kinoto</p>
-                    </div>
-
-                    <div class="card" id="lasanha">
-                        <img src="lasanha.png" alt="Lasanha">
-                        <h4>Lasanha mac n' cheese</h4>
-                        <p>por Juliano Vieira</p>
-                    </div>
-
-                    <div class="card" id="doce">
-                        <img src="doce.png" alt="Docinhos">
-                        <h4>Docinhos pão-do-céu</h4>
-                        <p>por Ricardo Golvea</p>
-                    </div>
-
-                    <div class="card" id="asinhas">
-                        <img src="asinhas.png" alt="Asinhas">
-                        <h4>Asinhas de frango ao barbecue</h4>
-                        <p>por Vania Steroski</p>
-                    </div>
-                    <div class="card" id="burger">
-                        <img src="burger.png" alt="Burger">
-                        <h4>Triplo bacon burger</h4>
-                        <p>por Jorge Renato</p>
-                    </div>
-
-                    <div class="card" id="pizza">
-                        <img src="pizza.png" alt="Pizza">
-                        <h4>Pizza 4 estações</h4>
-                        <p>por Fabiana Melo</p>
-                    </div>
-
-                    <div class="card" id="espaguete">
-                        <img src="espaguete.png" alt="Macarrão">
-                        <h4>Espaguete ao alho</h4>
-                        <p>por Júlia Kinoto</p>
-                    </div>
-
-                    <div class="card" id="lasanha">
-                        <img src="lasanha.png" alt="Lasanha">
-                        <h4>Lasanha mac n' cheese</h4>
-                        <p>por Juliano Vieira</p>
-                    </div>
-
-                    <div class="card" id="doce">
-                        <img src="doce.png" alt="Docinhos">
-                        <h4>Docinhos pão-do-céu</h4>
-                        <p>por Ricardo Golvea</p>
-                    </div>
-
-                    <div class="card" id="asinhas">
-                        <img src="asinhas.png" alt="Asinhas">
-                        <h4>Asinhas de frango ao barbecue</h4>
-                        <p>por Vania Steroski</p>
-                    </div>
+                {% endfor %}                    
 
                 </section>
             </main>
