@@ -4,6 +4,8 @@ Projeto de plataforma de receitas online desenvolvido no bootcamp Launchbase, da
 
 Back-end com Node.js usando template engine Nunjucks.
 
-Próximo passo: exibição dinâmica dos dados através de um arquivo de referência (data.js). 
+Exibição dinâmica dos dados através de um arquivo de referência (data.js). 
+
+Próximo passo: trocar modal por página de receita no script, definir rotas para cada receita no servidor.
 
 
