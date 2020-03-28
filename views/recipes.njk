@@ -11,7 +11,7 @@
 
                 {% for item in items %} 
 
-                    <div class="card" id="{{ loop.index }}">
+                    <div class="card" id="{{ loop.index0 }}">
                         <img src="{{ item.image }}" alt="Image of {{ item.title }}">
                         <h4>{{ item.title }}</h4>
                         <p>por {{ item.author }}</p>
@@ -22,23 +22,5 @@
                 </section>
             </main>
         </div>
-
-    <div class="modal-overlay">
-        <div class="modal">
-            <div class="modal-img">
-              <img src="" alt="receita">
-            </div>         
-              
-            <div class="modal-content">
-                <h4 class="recipe-title"></h4>
-                <p class="recipe-author"></p>
-            </div>
-
-            <a class="close-modal">
-                <p>Fechar</p>
-            </a> 
-
-          </div>
-       </div>
        
 {% endblock %}

@@ -88,6 +88,10 @@ header nav a:hover{
     align-items: center;
 }
 
+.card {
+    cursor: pointer;
+}
+
 .card img {
     width: 300px;
     border-radius: 15px;
@@ -221,4 +225,29 @@ main {
 .modal-overlay.active {
     opacity: 1;
     visibility: visible;
+}
+
+/* === RECIPE DETAILS === */
+
+.recipe-img img {
+    border-radius: 15px;
+    margin-bottom: 50px;
+}
+
+.recipe-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.recipe-title h2 {
+    font-size: 36px;
+    color: #111111;
+    line-height: 42px;
+    margin-bottom: 4px;
+}
+
+.recipe-author p {
+    font-size: 20px;
+    line-height: 24px;
+    color: #777777;
 }
