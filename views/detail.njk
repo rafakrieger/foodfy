@@ -4,10 +4,16 @@
         <title>{{ item.title }} - Foodfy</title>  
 {% endblock %}
 
+{% block bold %}
+    <nav>
+        <a href="/about" id="">Sobre</a>
+        <a href="/recipes" id="bold">Receitas</a>
+    </nav>
+{% endblock %}
+
 {% block content %}          
-        <div class="container">
-                <section class="recipe-detail">
-                         <div class="recipe-img">
+        <div class="container">                
+                        <div class="recipe-img">
                                 <img src="{{ item.image }}" alt="Image of {{ item.title }}">
                         </div>
                         <div class="recipe-header">
@@ -17,22 +23,40 @@
                                 <div class="recipe-author">
                                         <p>{{ item.author }}</p>
                                 </div>
+                        </div> 
+                        <div class="recipe-detail">
+                                <div class="recipe-topic">
+                                        <h4>Ingredientes</h4>
+                                        <p class="button">ESCONDER</p>
+                                </div>
+                                <div class="recipe-description">
+                                        {% for ingredient in item.ingredients %}
+                                                <ul>{{ ingredient }}</ul>
+                                        {% endfor %}   
+                                </div>
+                        </div>                       
+                        
+                        <div class="recipe-detail">
+                                <div class="recipe-topic">
+                                        <h4>Modo de preparo</h4>
+                                        <p class="button">MOSTRAR</p>
+                                </div>
+                                <div class="recipe-description hide">
+                                        {% for prep in item.preparation %}
+                                                <p>{{ prep }}</p> 
+                                        {% endfor %}                                            
+                                </div>                    
+                        </div>
+
+                        <div class="recipe-detail">
+                                <div class="recipe-topic">
+                                        <h4>Informações adicionais</h4>
+                                        <p class="button">MOSTRAR</p> 
+                                </div>
+                                <div class="recipe-description hide">
+                                        <p>{{item.information}}</p>          
+                                </div>
                         </div>                        
-                        <div class="ingredients">
-                                <h4>Ingredientes</h4>
-                                {% for ingredient in item.ingredients %}
-                                        <ul>{{ ingredient }}</ul>
-                                {% endfor %}   
-                        </div>
-                        <div class="preparation">
-                                <h4>Modo de preparo</h4>
-                                <p>{{ item.preparation}} </p>
-                        </div>
-                        <div class="infos">
-                                <h4>Informações</h4>
-                                <p>{{ item.information}} </p>
-                        </div>            
-                </section>
         </div>
 
 {% endblock %}
